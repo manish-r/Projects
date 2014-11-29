@@ -129,34 +129,4 @@ for(j in 1:length(li) ){
 
 
 
-rowTotals <-  row_sums(tdm)
-tdm2 <- tdm[which(rowTotals > 2),]
-tdm2
-str(tdm2)
-tdm2_matrix <- as.matrix(tdm2, stringsAsFactors=F)
-str(tdm2_matrix)
-tdm2_matrix <- sort(colSums(tdm2_matrix),decreasing=TRUE)
-head(tdm2_matrix)
-name <- names(tdm2_matrix)
-d <- data.frame(word=words, freq=tdm2_matrix)
 
-commonality.cloud(tdm2_matrix,comonality.measure=min,max.words=40,random.order=FALSE)
-class(tdm2_matrix[[1]])
-dtm2_matrix$Docs
-un <- unique(dtm2_matrix$Terms)
-cn <- count(dtm2_matrix)
-name1 <- names(cn)
-name1
-
-
-
-name <- names(nm)
-str(name)
-d <- data.frame(words=as.character(name),freq=as.numeric(dt))
-d[[1]] <- as.character(d[[1]])
-commonality.cloud(nm,max.words=40,random.order=FALSE)
-traceback()
-help
-
-
-inspect(dtm, list(dictionary=d))
